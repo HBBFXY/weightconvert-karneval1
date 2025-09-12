@@ -1,11 +1,10 @@
 # 在这个文件下编写代码，题目具体要求见README.md文件
-#weightConvert.py
-weightStr=input("请输入带有符号的重量值：")
-if weightStr[-2]in['kg']:
-  pd=eval(weightStr[0:-2])*2.2046
-  print("转换后的英制重量是{:.3f}pd".format(pd))
-elif weightStr[-2]in['pd']:
-  kg=aval(weightStr[0:-2])/2.2046
-  print("转换后的公制重量是{:.3f}kg".format(kg))
+weight_input=input()
+if weight_input[-2:] in ["kg","KG"]: 
+    pound=(eval(weight_input[0:-2]))*2.2046
+    print("对应的英制重量为{:.3f}磅".format(pound))
+elif weight_input[-2:] in ["pd","PD"]:
+    kilogram=(eval(weight_input[0:-2]))*0.4535
+    print("对应的公制重量为{:.3f}公斤".format(kilogram))
 else:
-  print("输入格式错误")
+    print("输入格式错误")
